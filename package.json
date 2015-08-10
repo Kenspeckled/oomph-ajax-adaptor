@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Kenspeckled/oomph-ajax-adaptor",
   "dependencies": {
-    "lodash": "~3.5.0"
+    "lodash": "~3.5.0",
+    "promise": "^7.0.3"
   }
 }

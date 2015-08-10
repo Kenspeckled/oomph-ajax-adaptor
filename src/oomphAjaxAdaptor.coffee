@@ -1,4 +1,4 @@
-ajax = require 'ajax'
+ajax = require './ajax'
 all = require './adaptorMethods/all'
 find = require './adaptorMethods/find'
 findBy = require './adaptorMethods/findBy'
