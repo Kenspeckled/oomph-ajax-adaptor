@@ -1,0 +1,28 @@
+{
+  "name": "oomph-ajax-adaptor",
+  "version": "0.0.0",
+  "description": "Ajax adaptor for oomph",
+  "main": "./lib/oomphAjaxAdaptor.js",
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "gulp": "^3.8.11",
+    "gulp-jasmine": "^2.0.1",
+    "jasmine": "^2.3.1"
+  },
+  "scripts": {
+    "start": "coffee app/serverApp.coffee",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kenspeckled/oomph-ajax-adaptor.git"
+  },
+  "author": "Kenspeckle",
+  "bugs": {
+    "url": "https://github.com/Kenspeckled/oomph-ajax-adaptor/issues"
+  },
+  "homepage": "https://github.com/Kenspeckled/oomph-ajax-adaptor",
+  "dependencies": {
+    "lodash": "~3.5.0"
+  }
+}
