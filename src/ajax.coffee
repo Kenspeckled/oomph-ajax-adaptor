@@ -23,7 +23,10 @@ httpRequest = (method, url, args, isJson) ->
         else
           resolve @response
       else
-        reject @statusText
+        if isJson
+          reject @statusText, JSON.parse(@response)
+        else
+          reject @statusText, @response
 
 ajax = 
 
