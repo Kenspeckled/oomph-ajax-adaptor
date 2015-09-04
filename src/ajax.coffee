@@ -17,13 +17,11 @@ httpRequest = (method, url, args, isJson) ->
       client.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
       client.send params 
     client.onload = ->
+      reponse = if isJson then JSON.parse(@response) else @response
       if @status == 200
-        if isJson
-          resolve JSON.parse(@response)
-        else
-          resolve @response
+        resolve reponse
       else
-        reject @statusText
+        reject status: @status, response: reponse
 
 ajax = 
 
