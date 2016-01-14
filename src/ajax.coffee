@@ -14,8 +14,9 @@ httpRequest = (method, url, args, isJson) ->
     else
       params = _utilities.objectToQueryString args
       client.open method, url
-      client.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
-      client.send params 
+      client.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+      client.setRequestHeader('Authorization', 'Bearer ' + window.sessionStorage.token) if window?.sessionStorage?.token
+      client.send params
     client.onload = ->
       reponse = if isJson then JSON.parse(@response) else @response
       if @status == 200
@@ -23,8 +24,7 @@ httpRequest = (method, url, args, isJson) ->
       else
         reject status: @status, response: reponse
 
-ajax = 
-
+ajax =
   get: (path, args) ->
     httpRequest 'GET',  path, args, true
   post: (path, args) ->
